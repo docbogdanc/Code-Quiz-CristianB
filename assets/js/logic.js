@@ -2,14 +2,15 @@ var startButton = document.querySelector("#start");
 var startScreen = document.querySelector("#start-screen")
 var timeEl = document.querySelector("#time");
 var questionsEl = document.querySelector("#questions");
-var questionTitleEl = document.querySelector("#question-title");
-var choicesEl = document.querySelector("#choices");
+
 
 
 startButton.addEventListener('click', startQuestions)
 function startQuestions(){
 // replace the class to hide the start menu
     startScreen.classList.replace('start','hide');
+    questionsEl.classList.replace('hide','start')
+    questions();
 }
 
 // create a variable for timer seconds
