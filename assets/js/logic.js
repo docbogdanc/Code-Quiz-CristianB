@@ -4,6 +4,8 @@ var endScreen = document.querySelector("#end-screen");
 var finalScore = document.querySelector("#final-score");
 var initials = document.querySelector("#initials");
 var submitButton = document.querySelector("#submit");
+var highscores = document.querySelector("#highscores")
+
 var timeEl = document.querySelector("#time");
 var questionsEl = document.querySelector("#questions");
 var secondLeft=10;
@@ -50,6 +52,19 @@ function finalMessage () {
 function sendInitials() {
     var inputData = initials.value;
     localStorage.setItem("initials", inputData);
+
+    var otherPage = window.open('highscores.html');
+    otherPage.onload = scoresOnOtherPage() ;
+
     endScreen.classList.replace('show', 'hide');
     startScreen.classList.replace('hide', 'start');
+}
+
+function scoresOnOtherPage() {
+    console.log("testing");
+    var newHighScore = otherPage.document.createElement('li');
+    // Set the content or attributes of the new element
+    newHighScore.textContent = inputData + " - "+score;
+    // Append the new element to the body of the other page
+    otherPage.document.highscores.appendChild(newHighScore);
 }
