@@ -72,9 +72,13 @@ function randomQuestion () {
   
     // create event listener for click on buttons ; score is    increasing if correct, time is dicreasing if incorrect
     button1.addEventListener("click", function() {
+      localStorage.getItem("time");
+      if (secondLeft <=0) {
+        finalMessage();
+        return
+      }
       if (button1.textContent ===("1. "+ correctChoice[qIndex])) {
           score++;
-          return score
       } else {
           if (secondLeft>=10) {
           secondLeft -= 10;} else {
@@ -123,7 +127,6 @@ function randomQuestion () {
         resetToNext();
         localStorage.setItem("count", score);        
         randomQuestion();
-        return score; 
       })
    
      }
