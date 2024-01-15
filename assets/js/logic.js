@@ -11,7 +11,8 @@ function startQuestions(){
     startScreen.classList.replace('start','hide');
     questionsEl.classList.replace('hide','show')
     randomQuestion()
-    resetToNext()
+    // resetToNext()
+    
 }
 
 
