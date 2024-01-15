@@ -9,7 +9,7 @@ startButton.addEventListener('click', startQuestions)
 function startQuestions(){
 // replace the class to hide the start menu
     startScreen.classList.replace('start','hide');
-    questionsEl.classList.replace('hide','start')
+    questionsEl.classList.replace('hide','show')
     questions();
 }
 
