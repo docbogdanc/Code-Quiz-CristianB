@@ -29,55 +29,34 @@ var choice4_El = document.querySelector("#choice4");
    }
 ]
 
-// create the function to display the title and choices 
+// create the function to display the question title
 function questions () {
-//     // unordListEl.textContent = "Hello";
+    questionTitleEl.textContent = currentChoices[0];
 //     //  choicesEl.innerText = qChoice;
     }
     
+// calculate the number of questions from the array
+var arrayLength = arrayQuestions.length
+// create a function to create an unordered list inside de "choices" div
+var qIndex = Math.floor(Math.random()*3);
+console.log(qIndex);
 
-
-// // create a function to create an unordered list inside de "choices" div
-var qIndex = 0;
-
-// function unListChoices() {
-//     var currentQuestion = arrayQuestions[qIndex]
-//     console.log(currentQuestion);
-//     var currentChoices = Object.values(currentQuestion);
-//     console.log("values are "+currentChoices);
-//     // create a variable for list elements
-//     var ulListElem = unordListEl.querySelectorAll('li');
-// // create a for loop to return the number of keys of the object
-//     for (var i = 1 ; i < currentChoices.length ; i++ ) {
-//     // create text for every choice
-//       var choiceEl = document.querySelector("#choice" + i);
-//       console.log(choiceEl);
-//       choice1_El.innerHTML = "Hey "+currentChoices[i];
-//       console.log(currentChoices[i]);
-//       console.log("i = "+i);
-//     };
-    
-// }
-// unListChoices();
-
+// select a question (object) from the array
 var currentQuestion = arrayQuestions[qIndex]
 console.log(currentQuestion);
+// create an array with the values of the object (question)
 var currentChoices = Object.values(currentQuestion);
 console.log("values are "+currentChoices);
 
+// create a function to create question choices and display them
+var qIndex = 0;
 function unListChoices() {
 // create a for loop to return the number of keys of the object
 for (let i = 1; i < currentChoices.length; i++) {
 //   create new element list and add choice text 
-  var newListItem = document.createElement('li');
+  var newListItem = document.createElement('button');
   unordListEl.appendChild(newListItem);
-  newListItem.textContent = currentChoices[i];
+  newListItem.textContent = i+". "+currentChoices[i];
 }
-
 }
-
 unListChoices()
-// var qTitle = arrayQuestions[qIndex].title;
-// console.log(qTitle);
-// var qChoice = arrayQuestions[qIndex].answer2;
-// console.log(qChoice);
