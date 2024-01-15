@@ -14,7 +14,7 @@ function startQuestions(){
 }
 
 // create a variable for timer start seconds
-var secondLeft=100;
+var secondLeft=1000;
 // create a funtion for timer
 function timer () {
     var setTimer = setInterval(function() {
