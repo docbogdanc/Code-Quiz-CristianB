@@ -12,36 +12,85 @@ var storageScore = localStorage.getItem("count");
 // create an array(list) of questions as objects
 var arrayQuestions = [
 {
-   title: "Where is ....",
-   answer1: "here",
-   answer2: "there",
-   answer3: "nowhere",
-   answer4: "extra"
+   title: "What is the correct way to declare a variable in JavaScript?",
+   answer1: "var x",
+   answer2: "let x",
+   answer3: "const x",
+   answer4: "All of the above"
 },
 {
-    title: "What is ....",
-    answer1: "blue",
-    answer2: "green",
-    answer3: "white",
-    answer4: "extra"
+    title: "Which operator is used to concatenate two strings in JavaScript?",
+    answer1: "+",
+    answer2: "-",
+    answer3: "*",
+    answer4: "%"
 },
 {
- title : "Why is ....",
- answer1: "cause",
- answer2: "not",
- answer3: "mmmh",
- answer4: "extra"
-}
+ title : "How do you write a single-line comment in JavaScript?",
+ answer1: " /This is a comment",
+ answer2: "/* This is a comment */",
+ answer3: "'This is a comment'",
+ answer4: "// This is a comment"
+},
+{
+  title: "What is the output of the following code snippet: console.log(typeof 'Hello World');?",
+  answer1: "string",
+  answer2: "number",
+  answer3: "boolean",
+  answer4: "All of the above"
+},
+{
+  title: "Which method is used to remove the last element from an array in JavaScript?",
+  answer1: "pop()",
+  answer2: "shift()",
+  answer3: "push()",
+  answer4: "add()"
+},
+{
+  title: "How do you round the number 7.25 to the nearest integer in JavaScript?",
+  answer1: "Math.ceil(7.25)",
+  answer2: "Math.floor(7.25)",
+  answer3: "Math.round(7.25)",
+  answer4: "Math,random(7.25)"
+},
+{
+  title: "What is the correct way to write an if statement in JavaScript?",
+  answer1: "if (x === 5) {}",
+  answer2: " if x === 5 {}",
+  answer3: "if x = 5 {}",
+  answer4: "if (x) = (5) {}"
+},
+{
+  title: "Which method is used to convert a string to uppercase in JavaScript?",
+  answer1: "toUpperCase()",
+  answer2: "toLowerCase()",
+  answer3: "convertToUpper()",
+  answer4: "convertToLower()"
+},
+{
+  title: "What is the output of the following code snippet: console.log(2 + '2');?",
+  answer1: "4",
+  answer2: "22",
+  answer3: "2",
+  answer4: "2'2'"
+},
+{
+  title: "What is the result of the following expression: 10 % 3?",
+  answer1: "1",
+  answer2: "2",
+  answer3: "3",
+  answer4: "0"
+},
 ]
 // create an array with the correct answers
-var correctChoice = [arrayQuestions[0].answer2, "green", "not", "not"];
+var correctChoice = ["All of the above", "+", "// This is a comment", "string", "pop()","Math.round(7.25)","if (x === 5) {}","toUpperCase()","22","1"];
 
 // calculate how many questions are in total in the list of questions
 var arrayLength = arrayQuestions.length
 
 function randomQuestion () {
   // create a function to choose a rondomm object/question from the list of questions
-  var qIndex = Math.floor(Math.random()*3);
+  var qIndex = Math.floor(Math.random()*10);
 
   // select an question from the array
   var currentQuestion = arrayQuestions[qIndex]

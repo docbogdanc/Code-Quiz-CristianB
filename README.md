@@ -8,14 +8,14 @@ Quiz Application - part of Bootcamp challenge
 
 This Project was created for bootcamp challenge.
 
-It tests the knowledge gained in HTML, CSS and JavaScript during the last weeks, especially the implementation of javascript. It takes an array of objects as questions with one possible correct answer and create a nice webpage that interact with the user, calculate user correct answers to the displayedd question and display the high score at the end. The interaction is timed on timer and every wrong answer penalised the user with 10 seconds. 
+It tests the knowledge gained in HTML, CSS and JavaScript during the last weeks, especially the implementation of JavaScript. It takes an array of objects as questions with one possible correct answer and create a nice webpage that interact with the user, calculate user correct answers to the displayed question and display the high score at the end. The interaction is timed on timer and every wrong answer penalised the user with 10 seconds. 
 
 
 This is how it starts:
 ![image of results](./assets/images/start.png)
 
 This is how the questions are displayed:
-![image of results](./)
+![image of results](./assets/images/question.png)
 
 This is the end screen with the score:
 ![image of results](./assets/images/end.png)
@@ -27,7 +27,7 @@ This is the highscore page:
 
 ## Installation
 
-The repository is on the GitHub repositories public domain ... and the deployed webpage can be found at ... where it was deployed using GitHub
+The repository is on the GitHub repositories public domain https://github.com/docbogdanc/Code-Quiz-CristianB.git and the deployed webpage can be found at https://docbogdanc.github.io/Code-Quiz-CristianB/ where it was deployed using GitHub
 
 
 ## Usage

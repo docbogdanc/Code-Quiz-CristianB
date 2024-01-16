@@ -10,7 +10,7 @@ var timeEl = document.querySelector("#time");
 var questionsEl = document.querySelector("#questions");
 
 // setting starting seconds for counter
-var secondLeft=10;
+var secondLeft=50;
 
 // start questions when button clicked
 startButton.addEventListener('click', startQuestions);
@@ -20,6 +20,8 @@ function startQuestions(){
     questionsEl.classList.replace('hide','show');
     // call function with questions
     randomQuestion();
+    // start the timer
+    timer();
    
     
 }
@@ -44,8 +46,7 @@ function timer () {
         }
     },1000);
 }
-// start the timer
-timer();
+
 
 // define the action when timer has stopped 
 function finalMessage () {
