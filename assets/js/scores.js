@@ -15,6 +15,9 @@ var storedHighScoredObj = JSON.parse(storedHighScoreString);
 // bring data from storage with last user initias and score
 var newInitials = localStorage.getItem("initials");
 var newScore = localStorage.getItem("count");
+// remove the last user initals and score from local storage to prevent creating duplicate score if webpage is refresh by the user
+localStorage.removeItem("initials");
+localStorage.removeItem("count")
 // create a new score object with the new initials and score
 newData = {key1: newInitials , key2: newScore}
 // update the highscores list that was in local storage with the new score 
@@ -37,7 +40,7 @@ for (var i=0 ; i<storedHighScoredObj.length ; i++) {
 
 }
 
-// clear highscores list and clear the local storage if clicked r"eset"
+// clear highscores list and clear the local storage if clicked "reset"
 clearScores.addEventListener('click' , reset) ;
 function reset (){
     highscores.textContent = "";
