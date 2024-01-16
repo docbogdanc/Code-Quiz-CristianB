@@ -155,7 +155,6 @@ function randomQuestion () {
 
 
 function resetToNext() {
-    console.log("stergem!");
     // removing question title
     questionTitleEl.innerHTML="";
     // removing all created buttons

@@ -62,7 +62,6 @@ function sendInitials() {
 }
 
 function scoresOnOtherPage() {
-    console.log("testing");
     var newHighScore = otherPage.document.createElement('li');
     // Set the content or attributes of the new element
     newHighScore.textContent = inputData + " - "+score;
