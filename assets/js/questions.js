@@ -7,7 +7,7 @@ var score = 0;
 
 var storageScore = localStorage.getItem("count");
 
-// create an array of questions as objects
+// create an array(list) of questions as objects
 var arrayQuestions = [
 {
    title: "Where is ....",
@@ -31,20 +31,20 @@ var arrayQuestions = [
  answer4: "extra"
 }
 ]
-
+// create an array with the correct answers
 var correctChoice = [arrayQuestions[0].answer2, "green", "not", "not"];
 
-// calculate the number of objects/questions from the array
+// calculate how many questions are in total in the list of questions
 var arrayLength = arrayQuestions.length
 
 function randomQuestion () {
-  // create a function to choose a rondomm object/question from the array
+  // create a function to choose a rondomm object/question from the list of questions
   var qIndex = Math.floor(Math.random()*3);
 
-  // select an object/question from the array
+  // select an question from the array
   var currentQuestion = arrayQuestions[qIndex]
   
-  // create an array with the values of the object/question
+  // create an array with the choices (object' values) of the question
   var currentChoices = Object.values(currentQuestion);
   
   // create the function to display the question title
@@ -71,7 +71,7 @@ function randomQuestion () {
     var button3 = document.getElementById("button3");
     var button4 = document.getElementById("button4");
   
-    // create event listener for click on buttons ; score is    increasing if correct, time is dicreasing if incorrect
+    // create event listener for click on buttons ; score is increasing if correct, time is dicreasing if incorrect
     button1.addEventListener("click", function() {
       localStorage.getItem("time");
       if (secondLeft <=0) {
@@ -148,12 +148,13 @@ function randomQuestion () {
    
      }
   
+// call the functions created above
   questions()
   unListChoices()
 
 }
 
-
+// remove the previous question to prepare for next one 
 function resetToNext() {
     // removing question title
     questionTitleEl.innerHTML="";
