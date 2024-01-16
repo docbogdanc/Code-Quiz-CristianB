@@ -5,6 +5,7 @@ var finalScore = document.querySelector("#final-score");
 var initials = document.querySelector("#initials");
 var submitButton = document.querySelector("#submit");
 var highscores = document.querySelector("#highscores")
+var arrayHighscores = [];
 
 var timeEl = document.querySelector("#time");
 var questionsEl = document.querySelector("#questions");
