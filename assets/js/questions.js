@@ -2,6 +2,8 @@ var questionTitleEl = document.querySelector("#question-title");
 var choicesEl = document.querySelector("#choices");
 var unordListEl = document.querySelector("#list");
 var feedback = document.querySelector("#feedback");
+var audioCorrrect = document.querySelector("#correctAudio");
+var audioWrong = document.querySelector("#incorrectAudio");
 // create starting point for score
 var score = 0;
 
@@ -80,9 +82,11 @@ function randomQuestion () {
       }
       if (button1.textContent ===("1. "+ correctChoice[qIndex])) {
           score++;
+          audioCorrrect.play();
           feedback.classList.replace('hide', 'start');
           feedback.textContent = "Correct";
       } else {
+        audioWrong.play();
         feedback.classList.replace('hide', 'start');
         feedback.textContent = "Wrong";
           if (secondLeft>=10) {
@@ -98,9 +102,11 @@ function randomQuestion () {
     button2.addEventListener("click", function() {
       if (button2.textContent === ("2. "+correctChoice[qIndex])) {
           score++;
+          audioCorrrect.play();
           feedback.classList.replace('hide', 'start');
           feedback.textContent = "Correct";
       } else {
+        audioWrong.play();
         feedback.classList.replace('hide', 'start');
         feedback.textContent = "Wrong";
           if (secondLeft>=10) {
@@ -115,9 +121,11 @@ function randomQuestion () {
     button3.addEventListener("click", function() {
       if (button3.textContent ===("3. "+ correctChoice[qIndex])) {
           score++;
+          audioCorrrect.play();
           feedback.classList.replace('hide', 'start');
           feedback.textContent = "Correct";
       } else {
+          audioWrong.play();
           feedback.classList.replace('hide', 'start');
           feedback.textContent = "Wrong";
           if (secondLeft>=10) {
@@ -132,9 +140,11 @@ function randomQuestion () {
     button4.addEventListener("click", function() {  
         if (button4.textContent ===("4. "+ correctChoice[qIndex])) {
             score++;
+            audioCorrrect.play();
             feedback.classList.replace('hide', 'start');
             feedback.textContent = "Correct";
         } else {
+            audioWrong.play();
             feedback.classList.replace('hide', 'start');
             feedback.textContent = "Wrong";
             if (secondLeft>=10) {
