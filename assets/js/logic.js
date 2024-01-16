@@ -37,10 +37,12 @@ function timer () {
         localStorage.setItem("time", secondLeft);
 
         if (secondLeft <= 0) {
-            secondLeft = 0
-            localStorage.setItem("time", secondLeft);
             // rest timer
             clearInterval(setTimer);
+            // display 0 seconds all time as sometimes go to -1
+            secondLeft = 0
+            localStorage.setItem("time", secondLeft);
+
             // call function when timer "0"
             finalMessage();
         }
@@ -50,6 +52,9 @@ function timer () {
 
 // define the action when timer has stopped 
 function finalMessage () {
+    // make sure that the time show 0 (sometime it goes to -1)
+    secondLeft = 0
+    timeEl.textContent = secondLeft;
     // delete the question title and choices
     resetToNext();
     // hide starting menu and question menu and show the endScreen menu
